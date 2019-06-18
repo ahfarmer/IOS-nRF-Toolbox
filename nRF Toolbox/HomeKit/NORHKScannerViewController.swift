@@ -33,7 +33,7 @@ class NORHKScannerViewController: UIViewController, UITableViewDelegate, UITable
         super.viewWillAppear(animated)
         UIApplication.shared.setStatusBarStyle(UIStatusBarStyle.default, animated: true)
         
-        let activityIndicatorView              = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
+        let activityIndicatorView              = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.gray)
         activityIndicatorView.hidesWhenStopped = true
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityIndicatorView)
         activityIndicatorView.startAnimating()
@@ -90,7 +90,7 @@ class NORHKScannerViewController: UIViewController, UITableViewDelegate, UITable
         guard discoveredAccessories.contains(accessory) == true else {
             return
         }
-        discoveredAccessories.remove(at: discoveredAccessories.index(of: accessory)!)
+        discoveredAccessories.remove(at: discoveredAccessories.firstIndex(of: accessory)!)
         devicesTable.reloadData()
     }
 }

@@ -38,7 +38,7 @@ class NORDFUConstantsUtility: NSObject {
     
     static func isApplicationStateInactiveOrBackgrounded () -> Bool {
         let appState = UIApplication.shared.applicationState
-        return appState == UIApplicationState.inactive || appState == UIApplicationState.background
+        return appState == UIApplication.State.inactive || appState == UIApplication.State.background
     }
 
 }

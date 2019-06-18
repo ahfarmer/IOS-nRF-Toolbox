@@ -74,7 +74,7 @@ class NORAppUtilities: NSObject {
     
     static func isApplicationInactive() -> Bool {
         let appState = UIApplication.shared.applicationState
-        return appState != UIApplicationState.active
+        return appState != UIApplication.State.active
     }
     
     static func getHelpTextForService(service aServiceId: NORServiceIds) -> String {

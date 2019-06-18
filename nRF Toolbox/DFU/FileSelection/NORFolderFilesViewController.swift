@@ -76,9 +76,9 @@ class NORFolderFilesViewController: UIViewController, UITableViewDataSource, UIT
         }
         
         if aFilePath == selectedPath {
-            aCell.accessoryType = UITableViewCellAccessoryType.checkmark
+            aCell.accessoryType = UITableViewCell.AccessoryType.checkmark
         } else {
-            aCell.accessoryType = UITableViewCellAccessoryType.none
+            aCell.accessoryType = UITableViewCell.AccessoryType.none
         }
         
         return aCell
@@ -93,12 +93,12 @@ class NORFolderFilesViewController: UIViewController, UITableViewDataSource, UIT
         self.preselectionDelegate?.onFilePreselected(withURL: filePath!)
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
-        return UITableViewCellEditingStyle.delete
+    internal func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return UITableViewCell.EditingStyle.delete
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        guard editingStyle == UITableViewCellEditingStyle.delete else {
+    internal func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard editingStyle == UITableViewCell.EditingStyle.delete else {
             return
         }
 
@@ -111,7 +111,7 @@ class NORFolderFilesViewController: UIViewController, UITableViewDataSource, UIT
         }
 
         files?.remove(at: indexPath.row)
-        tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+        tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
     
         if filePath == selectedPath {
             selectedPath = nil
