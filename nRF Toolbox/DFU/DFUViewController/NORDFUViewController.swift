@@ -35,6 +35,7 @@ class NORDFUViewController: NORBaseViewController, NORScannerDelegate, NORFileSe
     @IBOutlet weak var uploadPane: UIView!
     @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var progress: UIProgressView!
+    @IBOutlet weak var secretInput: UITextField!
 
     //MARK: - UIViewController Actions
     
@@ -46,7 +47,21 @@ class NORDFUViewController: NORBaseViewController, NORScannerDelegate, NORFileSe
     }
     @IBAction func diagnosticButtonTapped(_ sender: AnyObject) {
         print("diagnostic")
-        
+        let secret: String = secretInput.text!;
+        print("secret: \(secret)")
+
+        // NEXT: modify the DFUServiceInitiator to work like the android rhombus one
+        let initiator = DFUServiceInitiator(centralManager: centralManager!, target: selectedPeripheral!)
+        initiator.forceDfu = UserDefaults.standard.bool(forKey: "dfu_force_dfu")
+        initiator.packetReceiptNotificationParameter = UInt16(UserDefaults.standard.integer(forKey: "dfu_number_of_packets"))
+        initiator.logger = self
+        initiator.delegate = self
+        initiator.progressDelegate = self
+        initiator.enableUnsafeExperimentalButtonlessServiceInSecureDfu = true
+
+        dfuController = initiator.with(firmware: selectedFirmware!).start()
+        uploadButton.setTitle("Cancel", for: UIControl.State())
+        uploadButton.isEnabled = true
     }
 
     //MARK: - UIVIewControllerDelegate

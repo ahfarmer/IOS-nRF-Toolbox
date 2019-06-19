@@ -2038,6 +2038,25 @@
                                     <segue destination="BQP-B5-Tee" kind="presentation" identifier="scan" id="0i8-Ot-uid"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FN-u4-uvg">
+                                <rect key="frame" x="106" y="372" width="163" height="48"/>
+                                <color key="backgroundColor" red="0.42352941179999998" green="0.79215686269999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Os8-pA-pEd"/>
+                                    <constraint firstAttribute="width" constant="163" id="lnw-wJ-fzs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
+                                <state key="normal" title="Diagnostic">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="ConnectButtonPressed">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="diagnosticButtonTapped:" destination="ZfZ-xR-bsT" eventType="touchUpInside" id="A6n-aB-az6"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DEVICE FIRMWARE UPDATE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CN-hP-sI7">
                                 <rect key="frame" x="0.0" y="231" width="318" height="32"/>
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="27"/>
@@ -2239,36 +2258,26 @@
                                 <color key="textColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3FN-u4-uvg">
-                                <rect key="frame" x="106" y="390" width="163" height="48"/>
-                                <color key="backgroundColor" red="0.42352941179999998" green="0.79215686269999996" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="Os8-pA-pEd"/>
-                                    <constraint firstAttribute="width" constant="163" id="lnw-wJ-fzs"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="17"/>
-                                <state key="normal" title="Diagnostic">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="ConnectButtonPressed">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="diagnosticButtonTapped:" destination="ZfZ-xR-bsT" eventType="touchUpInside" id="A6n-aB-az6"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dkCAJKArVEu5Ltw_EwVTxA" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yqa-nE-iy0">
+                                <rect key="frame" x="36" y="435" width="303" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.96067994830000003" green="0.96084433790000001" blue="0.96066969629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8K8-0E-rYV" firstAttribute="top" secondItem="fT7-zC-dbm" secondAttribute="bottom" constant="31" id="4hW-MH-sNR"/>
                             <constraint firstItem="lJA-6J-NbQ" firstAttribute="leading" secondItem="dWV-qC-ez4" secondAttribute="leading" id="72k-9W-2bu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yqa-nE-iy0" secondAttribute="trailing" constant="20" id="9NC-mj-KVw"/>
                             <constraint firstAttribute="trailingMargin" secondItem="8K8-0E-rYV" secondAttribute="trailing" constant="14" id="Ham-tb-mDc"/>
+                            <constraint firstItem="hGd-vQ-1ZP" firstAttribute="top" secondItem="yqa-nE-iy0" secondAttribute="bottom" constant="8" id="Hfa-Ts-qpX"/>
                             <constraint firstItem="fT7-zC-dbm" firstAttribute="leading" secondItem="dWV-qC-ez4" secondAttribute="leadingMargin" constant="19" id="JKO-DP-DqH"/>
                             <constraint firstItem="lJA-6J-NbQ" firstAttribute="top" secondItem="qcu-dM-eMJ" secondAttribute="bottom" id="KLJ-MM-tk2"/>
                             <constraint firstAttribute="centerX" secondItem="hGd-vQ-1ZP" secondAttribute="centerX" id="KPm-8k-QM1"/>
                             <constraint firstItem="O9u-7t-r4K" firstAttribute="top" secondItem="zgI-eq-aFb" secondAttribute="bottom" constant="11" id="KSq-zU-Qky"/>
                             <constraint firstItem="spa-sH-2kC" firstAttribute="leading" secondItem="dWV-qC-ez4" secondAttribute="leadingMargin" constant="19" id="Kpn-D5-gOT"/>
+                            <constraint firstItem="yqa-nE-iy0" firstAttribute="centerX" secondItem="dWV-qC-ez4" secondAttribute="centerX" id="LS5-Pe-rHS"/>
                             <constraint firstAttribute="centerY" secondItem="5CN-hP-sI7" secondAttribute="centerY" constant="28.5" id="MO8-XY-kNG"/>
                             <constraint firstItem="zgI-eq-aFb" firstAttribute="top" secondItem="JLD-Gd-zCF" secondAttribute="bottom" id="NJF-zN-Ejb"/>
                             <constraint firstItem="fT7-zC-dbm" firstAttribute="top" secondItem="qcu-dM-eMJ" secondAttribute="bottom" constant="11" id="OAM-9q-goj"/>
@@ -2279,11 +2288,12 @@
                             <constraint firstItem="N7E-Zl-a8K" firstAttribute="centerX" secondItem="dWV-qC-ez4" secondAttribute="centerX" id="UG1-NV-hBm"/>
                             <constraint firstItem="JLD-Gd-zCF" firstAttribute="leading" secondItem="dWV-qC-ez4" secondAttribute="leadingMargin" constant="19" id="WOy-xU-iuO"/>
                             <constraint firstItem="3FN-u4-uvg" firstAttribute="centerX" secondItem="dWV-qC-ez4" secondAttribute="centerX" id="WUi-ze-Xjv"/>
+                            <constraint firstItem="yqa-nE-iy0" firstAttribute="centerX" secondItem="dWV-qC-ez4" secondAttribute="centerX" id="Xtg-Jp-A1x"/>
                             <constraint firstItem="JLD-Gd-zCF" firstAttribute="top" secondItem="8K8-0E-rYV" secondAttribute="bottom" constant="8" id="Xvw-jM-T0t"/>
                             <constraint firstItem="O9u-7t-r4K" firstAttribute="leading" secondItem="dWV-qC-ez4" secondAttribute="leadingMargin" constant="19" id="Ziy-Hc-Mwp"/>
-                            <constraint firstItem="hGd-vQ-1ZP" firstAttribute="top" secondItem="3FN-u4-uvg" secondAttribute="bottom" constant="35" id="aoh-cM-XDv"/>
                             <constraint firstItem="MKQ-HG-7CT" firstAttribute="top" secondItem="hGd-vQ-1ZP" secondAttribute="bottom" constant="30" id="fcg-iD-faM"/>
                             <constraint firstItem="MKQ-HG-7CT" firstAttribute="top" secondItem="N7E-Zl-a8K" secondAttribute="bottom" constant="8" id="gbB-hF-ay7"/>
+                            <constraint firstItem="yqa-nE-iy0" firstAttribute="top" secondItem="3FN-u4-uvg" secondAttribute="bottom" constant="15" id="hFz-q1-Afj"/>
                             <constraint firstItem="zgI-eq-aFb" firstAttribute="leading" secondItem="dWV-qC-ez4" secondAttribute="leadingMargin" constant="19" id="hQe-Pp-moP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O9u-7t-r4K" secondAttribute="trailing" constant="14" id="kcD-uy-LlL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JLD-Gd-zCF" secondAttribute="trailing" constant="14" id="knJ-U6-IaV"/>
@@ -2309,6 +2319,7 @@
                         <outlet property="fileType" destination="gkd-zB-UKS" id="KFb-QL-xjZ"/>
                         <outlet property="progress" destination="c7u-0x-ak9" id="Z76-aE-x2e"/>
                         <outlet property="progressLabel" destination="6hI-Pc-GIS" id="TaH-ZR-8kp"/>
+                        <outlet property="secretInput" destination="yqa-nE-iy0" id="djr-Sp-z5F"/>
                         <outlet property="selectFileButton" destination="d1Z-zS-eN7" id="T5b-oB-kdX"/>
                         <outlet property="uploadButton" destination="PVI-T9-QmJ" id="b3Q-SA-uyT"/>
                         <outlet property="uploadPane" destination="zgI-eq-aFb" id="dU3-FR-v2N"/>
