@@ -310,6 +310,8 @@ class NORHRMViewController: NORBaseViewController, CBCentralManagerDelegate, CBP
                 return (xValues?.object(at: Int(idx)) as! NSDecimalNumber).subtracting(xValues?.firstObject as! NSDecimalNumber)
             case .Y:
                 return hrValues?.object(at: Int(idx)) as AnyObject?
+            default:
+                return nil;
         }
     }
 

@@ -75,6 +75,7 @@
 		52BDCBBE1C3FD86900E2680F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BDCBBD1C3FD86900E2680F /* QuartzCore.framework */; };
 		52BDCBC61C47C2C300E2680F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52BDCBC51C47C2C300E2680F /* Launch Screen.storyboard */; };
 		52D9BC9E1DD0CB760030E824 /* NORData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D9BC9D1DD0CB760030E824 /* NORData.swift */; };
+		74C1813922B9B0E700115141 /* CorePlot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74C1813822B9B0E700115141 /* CorePlot.framework */; };
 		7E1B422918A8DF4D006BA1BC /* high.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E1B422818A8DF4D006BA1BC /* high.mp3 */; };
 		DCBF9D003D5AA175E9F24910 /* Pods_nRF_Toolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302004489406AEA824DCF86D /* Pods_nRF_Toolbox.framework */; };
 /* End PBXBuildFile section */
@@ -170,6 +171,7 @@
 		52BDCBBD1C3FD86900E2680F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		52BDCBC51C47C2C300E2680F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		52D9BC9D1DD0CB760030E824 /* NORData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NORData.swift; sourceTree = "<group>"; };
+		74C1813822B9B0E700115141 /* CorePlot.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CorePlot.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1B422818A8DF4D006BA1BC /* high.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = high.mp3; sourceTree = "<group>"; };
 		7E6ED10A196ED482008010B6 /* firmwares */ = {isa = PBXFileReference; lastKnownFileType = folder; path = firmwares; sourceTree = "<group>"; };
 		89CF4D2BA242FBAD9F6C46E9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C1813922B9B0E700115141 /* CorePlot.framework in Frameworks */,
 				522636371C60FFB00054A550 /* libz.tbd in Frameworks */,
 				52BDCB191C3FD31F00E2680F /* Accelerate.framework in Frameworks */,
 				52BDCBBE1C3FD86900E2680F /* QuartzCore.framework in Frameworks */,
@@ -278,6 +281,7 @@
 		5217F3E41859EE0000F2D5BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74C1813822B9B0E700115141 /* CorePlot.framework */,
 				309F08671E6D706B00B7546A /* HomeKit.framework */,
 				522636361C60FFB00054A550 /* libz.tbd */,
 				52BDCBBD1C3FD86900E2680F /* QuartzCore.framework */,
@@ -569,11 +573,11 @@
 		5217F3DA1859EE0000F2D5BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Nordic Semiconductor";
 				TargetAttributes = {
 					5217F3E11859EE0000F2D5BB = {
-						DevelopmentTeam = P3R8YQEV4L;
+						DevelopmentTeam = QE6668UABK;
 						LastSwiftMigration = 0910;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -767,6 +771,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -775,12 +780,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -823,6 +830,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				"ARCHS[sdk=*]" = "$(ARCHS_STANDARD)";
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -831,12 +839,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -878,6 +888,7 @@
 				CODE_SIGN_ENTITLEMENTS = "nRF Toolbox/nRF Toolbox.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = QE6668UABK;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -905,7 +916,7 @@
 					"\"iOSDFULibrary\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nordicsemi.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rhombusnordicsemi.nRF-Toolbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
@@ -930,6 +941,7 @@
 				CODE_SIGN_ENTITLEMENTS = "nRF Toolbox/nRF Toolbox.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = QE6668UABK;
 				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -957,7 +969,7 @@
 					"\"iOSDFULibrary\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.nordicsemi.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.rhombusnordicsemi.nRF-Toolbox";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_INSTALL_OBJC_HEADER = NO;
