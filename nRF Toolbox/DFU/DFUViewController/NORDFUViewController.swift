@@ -35,7 +35,7 @@ class NORDFUViewController: NORBaseViewController, NORScannerDelegate, NORFileSe
     @IBOutlet weak var uploadPane: UIView!
     @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var progress: UIProgressView!
- 
+
     //MARK: - UIViewController Actions
     
     @IBAction func aboutButtonTapped(_ sender: AnyObject) {
@@ -44,10 +44,15 @@ class NORDFUViewController: NORBaseViewController, NORScannerDelegate, NORFileSe
     @IBAction func uploadButtonTapped(_ sender: AnyObject) {
         handleUploadButtonTapped()
     }
-    
+    @IBAction func diagnosticButtonTapped(_ sender: AnyObject) {
+        print("diagnostic")
+        
+    }
+
     //MARK: - UIVIewControllerDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("DFU viewdidload")
         self.verticalLabel.transform = CGAffineTransform(translationX: -(verticalLabel.frame.width/2) + (verticalLabel.frame.height / 2), y: 0.0).rotated(by: -.pi / 2)
         
         if isImportingFile {
